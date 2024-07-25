@@ -3,13 +3,11 @@
 
 function Solution(S) {
     let numS = S.split('').map(item => Number(item));
-   // console.log(numS)
     function solve(numS){
         for (let i=0;i<numS.length-1;i++){
             if((numS[i]+ numS[i+1]<=9)){
                 numS[i] = numS[i]+numS[i+1]
                 numS.splice(i+1, 1)
-                console.log(numS)
                 return solve(numS)
 
             }
